@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios');
+const axios = require('axios');//This imports the axios library for making HTTP requests
 const app = express();
 const port = 3000;
 
@@ -13,6 +13,7 @@ app.get('/', async (req, res) => {
         pageName: "Home",
         content: "Here is a random person from an API!",
         personName: personResponse.data.name
+        
     };
     res.render('home', ejsVarObject);
 });
